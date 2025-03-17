@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+    # context: specifies the path where the build context exist
+      context: .
+      dockerfile: Dockerfile.dev
+    ports: 
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
